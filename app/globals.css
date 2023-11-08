@@ -2,26 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #0000;
+  background: #FFF;
+}
+
+.back-texture{
+  background: url(../app/assets/backtexture.png) top left no-repeat ;
+  background-size: cover;
+}
+
+.back-greencolor{
+  background: linear-gradient(94deg, rgba(143, 209, 106, 0.60) -10.12%, rgba(97, 149, 84, 0.00) 19.31%, rgba(86, 126, 86, 0.00) 86.19%, #A3CEB6 118.29%);
+}
+
+.background-mark1{
+  background: url('./assets/mark2.png') top left no-repeat, url(../app/assets/backtexture.png) top left no-repeat;
+  background-size: cover;
+}
+
+.background-mark3{
+  background: url('./assets/mark3.png') top left no-repeat, url(../app/assets/backtexture.png) top left no-repeat;
+  background-size: cover;
+}
+
+.background-mark4{
+  background: url('./assets/markao.png') top left no-repeat, url(../app/assets/backtexture.png) top left no-repeat;
+  background-size: cover;
 }
