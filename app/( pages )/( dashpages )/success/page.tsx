@@ -8,6 +8,7 @@ import Link from "next/link";
 import Router from "next/navigation";
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from "next/navigation";
+import LoggedInGuard from "@/app/( verification hook )/loggedinguard";
 
 export default function Success() {
   const searchparam = useSearchParams()
@@ -97,7 +98,8 @@ export default function Success() {
 
 
   return (
-    <div className='text-black'>
-    </div>
+    <LoggedInGuard>
+        <div className=""></div>
+    </LoggedInGuard>
   )
 }

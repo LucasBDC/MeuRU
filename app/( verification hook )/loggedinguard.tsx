@@ -8,12 +8,16 @@ import { auth } from "@/app/( firebase )/firebase";
 export default function LoggedInGuard({ children }: { children: React.ReactNode }): React.ReactElement {
   // Router
   const router = useRouter();
-
-  // Check if the user is logged in
-useEffect(() =>{
+function LogVerify(){
   if(!auth.currentUser){
     router.push('/login')
    } 
+}
+  // Check if the user is logged in
+useEffect(() =>{
+  
+   setTimeout(
+    LogVerify, 1000);
 }, )
 return(
   <div>{children}</div>

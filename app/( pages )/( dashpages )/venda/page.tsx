@@ -8,6 +8,7 @@ import Link from "next/link";
 import axios from "axios";
 import Image from "next/image";
 import Voltar from '../../../assets/back.png'
+import LoggedInGuard from "@/app/( verification hook )/loggedinguard";
 export interface prod{
   soma: Number,
   desjejumScreen: Number,
@@ -84,6 +85,7 @@ export default function Venda() {
   }, [desjejumScreen, almocoScreen, jantarScreen])
 
   return (
+    <LoggedInGuard>
     <div className="flex flex-col h-screen items-center justify-around text-black">
       <Link href='/dashboard'><button className="bg-[#4B6858] hover:bg-[#618672] duration-100 active:bg-[#314339] flex text-white items-center gap-1 font-semibold py-2 px-5 rounded-tl-2xl rounded-br-2xl text-xl self-start "><Image src={Voltar} alt="voltar" className="w-7"/><p>Voltar</p></button></Link>
       <div className="flex flex-col gap-2">
@@ -115,5 +117,5 @@ export default function Venda() {
       <div className="flex justify-center flex-col"><p className="self-center w-32 border-verdeescuro border-2 text-center p-2 rounded-lg mt-10">R${soma}</p>
       <button onClick={() => FuncionComprar(producto)} className='bg-transparent text-verdeescuro font-bold text-2xl p-3 border-2 border-verdeescuro px-16 mt-10 rounded-tl-2xl rounded-br-2xl hover:bg-verdeescuro hover:text-white duration-200 ease-in-out' >Pagar</button></div>
       </div>
-      
+      </LoggedInGuard>
   )}

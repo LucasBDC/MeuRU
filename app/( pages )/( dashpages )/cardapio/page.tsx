@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Voltar from '@/app/assets/back.png'
+import { MagicMotion } from "react-magic-motion";
+import LoggedInGuard from "@/app/( verification hook )/loggedinguard";
 function MyApp({ Component, pageProps } : any) {
     const [desjejum, setDesjejum] = useState('')
     const [almoco, setAlmoco] = useState('') 
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps } : any) {
       setTimeout(handleLoader, 1000)
     }, [])
   return (
+    <MagicMotion>
     <div className="back-greencolor h-screen p-4">
       <nav><Link href='/dashboard'><button className="bg-[#4B6858] hover:bg-[#618672] duration-100 active:bg-[#314339] flex text-white items-center gap-1 font-semibold py-2 px-5 rounded-tl-2xl rounded-br-2xl text-xl self-start "><Image src={Voltar} alt="voltar" className="w-7"/><p>Voltar</p></button></Link></nav>
       <div className="flex flex-col gap-5 justify-center items-center h-[100%] ">
@@ -34,6 +37,7 @@ function MyApp({ Component, pageProps } : any) {
       <p className="text-black border-verdeescuro border-2 resize-none w-[80%] rounded-xl p-3 bg-transparent">{almoco}</p>
       <p className="text-black border-verdeescuro border-2 resize-none w-[80%] rounded-xl p-3 bg-transparent">{jantar}</p></div>
     </div>
+    </MagicMotion>
   );
 }
 

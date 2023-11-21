@@ -68,6 +68,7 @@ export default function Dashboard(){
   }, []);
 
   return(
+    <LoggedInGuard>
     <div className="back-greencolor flex flex-col justify-center">
       <nav className='flex justify-between p-7 items-center w-[80%] self-center'>
         <Link href='/'><Image src={Logo} alt='Logo'/></Link>
@@ -102,5 +103,6 @@ export default function Dashboard(){
       </section>
       <Footer/>
     </div>
+    </LoggedInGuard>
   )
 }
