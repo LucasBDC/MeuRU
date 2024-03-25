@@ -43,7 +43,7 @@ export default function Login(){
                     <h2 className="text-black text-[4rem] font-extrabold text-center mt-10">Login</h2>
                     <StyledInput type='email' placeholder='example@gmail.com' name='email' value={email} label='email' texto='E-mail' onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setEmail(e.target.value)}/>
                     <StyledInput type='password' placeholder='*******' value={password} name='password' label='password' texto='Senha' onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setPassword(e.target.value)}/>
-                    <Link href='/'><p className="text-gray-400 text-right hover:text-gray-700 duration-100">Esqueceu sua Senha?</p></Link>
+{/*                     <Link href='/'><p className="text-gray-400 text-right hover:text-gray-700 duration-100">Esqueceu sua Senha?</p></Link> */}
                     <div className="flex flex-col w-[100%] gap-2 justify-between mt-3">
                         <div className="w-[100%]">
                         <AuthButton value='ENTRAR' onClick={() => handleSignIn()}/>
