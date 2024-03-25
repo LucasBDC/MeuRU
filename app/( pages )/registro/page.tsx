@@ -112,7 +112,7 @@ export default function Registro(){
                         <StyledInput type='text' placeholder='Matrícula' name='matricula' label='matricula' texto='Matrícula' value={matricula} onChange={(e: { target: { value: SetStateAction<string>; }; }) => {
                           setMatricula(e.target.value as string);
                         }}/>
-                        <Link href='/'><p className="text-gray-400 text-right hover:text-gray-700 duration-100 mt-1">Esqueceu sua Senha?</p></Link>
+{/*                         <Link href='/'><p className="text-gray-400 text-right hover:text-gray-700 duration-100 mt-1">Esqueceu sua Senha?</p></Link> */}
                         <AuthButton value='CADASTRAR'/>
                     </form>
                 </div>
